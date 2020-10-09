@@ -42,7 +42,7 @@ public class PlantPlacesController {
 	@RequestMapping(value="/start", method=RequestMethod.GET, params= {"loyalty=blue"})
 	public String readBlue(){
 		
-		return "start";
+		return "blue";
 	}
 	
 	@RequestMapping(value="/start", method=RequestMethod.GET, params= {"loyalty=silver"})
@@ -50,7 +50,7 @@ public class PlantPlacesController {
 		SpecimenDTO specimenDTO = specimenServiceStub.fetchById(43);
 		specimenDTO.setSpecimenId(90);
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("start");
+		modelAndView.setViewName("silver");
 		modelAndView.addObject("specimenDTO",specimenDTO);
 		return modelAndView;
 	}
